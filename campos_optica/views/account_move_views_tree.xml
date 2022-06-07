@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_move_tree_campos" model="ir.ui.view">
+            <field name="name">account.move.tree.campos</field>
+            <field name="model">account.move</field>
+            <field name="priority">2</field>
+            <field name="inherit_id" ref="account.view_quotation_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field  name="Campo_Laboratorio_Account" readonly="1" />
+                </xpath>
+
+                <xpath expr="//field[@name='user_id']" position="before">
+                    <field  name="Campo_Paciente_Account" widget="res_partner_many2one"/>
+                </xpath>
+
+                <xpath expr="//field[@name='user_id']" position="before">
+                    <field  name="Campo_Albaran_Account" widget="res_partner_many2one"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</openerp>
+
