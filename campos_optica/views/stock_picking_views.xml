@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+       <!-- Inherit Form View to Modify it -->
+        <record id="view_picking_form_campos2" model="ir.ui.view">
+            <field name="name">stock.picking.form.campos2</field>
+            <field name="model">stock.picking</field>
+            <field eval="12" name="priority"/>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <field name="picking_type_id" position ="after">
+                    <field name="Campo_Laboratorio_Stock"/>
+                    <field name="Campo_Paciente_Stock"/>
+                    <field name="Campo_Albaran_Stock"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
