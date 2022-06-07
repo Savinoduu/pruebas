@@ -6,8 +6,8 @@ from odoo import models, fields
 class CamposOpticaAccount(models.Model):
     _inherit = 'account.move'
     _name = 'account.move'
-    Campo_Laboratorio_Account = fields.Many2one(comodel_name='res.partner',string="Laboratorio",required=True, ondelete='cascade',compute="Buscador")
-    Campo_Paciente_Account = fields.Many2one(comodel_name='res.partner',string="Paciente",required=True, ondelete='cascade',compute="Buscador")
+    Campo_Laboratorio_Account = fields.Many2one(comodel_name='res.partner',string="Laboratorio",required=False, ondelete='cascade',compute="Buscador")
+    Campo_Paciente_Account = fields.Many2one(comodel_name='res.partner',string="Paciente",required=False, ondelete='cascade',compute="Buscador")
     Campo_Albaran_Account = fields.Char(string="Albaran",compute="Buscador")
 
     def Buscador(self):

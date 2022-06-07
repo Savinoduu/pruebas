@@ -9,7 +9,7 @@
             <field name="arch" type="xml">
 
                 <xpath expr="//field[@name='partner_id']" position="after">
-                    <field  name="Campo_Laboratorio_Sale" readonly="1" force_save="1"/>
+                    <field  name="Campo_Laboratorio_Sale" readonly="1" />
                 </xpath>
 
                 <xpath expr="//field[@name='user_id']" position="before">
