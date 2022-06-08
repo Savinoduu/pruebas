@@ -101,7 +101,7 @@ class AccountMove(models.Model):
                     "NITEmisor": str(nit_company),
                     # "NITEmisor": '103480307',
                     "NombreComercial": factura.journal_id.fel_nombre_comercial or "",
-                    "NombreEmisor": factura.company_id.name or ""
+                    "NombreEmisor": factura.company_id.company_registry or ""
                 }
 
                 nit_partner = "CF"
