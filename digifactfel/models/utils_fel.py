@@ -145,6 +145,9 @@ class ReceptorModel:
             "CorreoReceptor": str(self.config.correo_receptor),
         }
 
+        if len(attr["IDReceptor"]) == 13:
+            attr["TipoEspecial"] = "CUI"
+
         if not self.config.correo_receptor:
             del attr["CorreoReceptor"]
 

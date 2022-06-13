@@ -877,7 +877,7 @@ class AccountMove(models.Model):
                     
                     if is_exportacion:
                         id_receptor = "CF"
-                                        
+                                                                 
                     correo_receptor = factura.partner_id.email
                     receptor_config = ReceptorConfig(
                         nombre_receptor=nombre_receptor,
